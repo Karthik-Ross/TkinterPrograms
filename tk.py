@@ -1,0 +1,27 @@
+import tkinter
+from tkinter import *
+win = Tk()
+win.geometry("400x600")
+def something():
+    data = input("Enter the word to be printed : ")
+    print(data)
+b = Button(win,text="Button1",command=something,activeforeground="red")
+b.pack()
+c = Canvas(win,height=250,width=300,bg='blue')
+coordinates = 10,50,240,210
+arc = c.create_arc(coordinates,start=0,extent=150,fill='red')
+c.pack()
+c1 = IntVar()
+c2 = IntVar()
+cb1 = Checkbutton(win,text='Music',offvalue=0,onvalue=1,height=2,width=6,variable=c1,bg="yellow")
+cb1.pack()
+cb2 = Checkbutton(win,text='Video',offvalue=0,onvalue=1,height=2,width=6,variable=c2,bg="blue")
+cb2.pack()
+val = IntVar()
+rb1 = Radiobutton(win,text="Option1",variable=val,value=1)
+rb1.pack()
+rb2 = Radiobutton(win,text="Option2",variable=val,value=2)
+rb2.pack()
+rb3 = Radiobutton(win,text="Option3",variable=val,value=3)
+rb3.pack()
+win.mainloop()
